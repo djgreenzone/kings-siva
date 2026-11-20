@@ -1,28 +1,27 @@
 import Image from "next/image";
 import EntryForm from "./EntryForm";
-import PatternBands from "./PatternBands";
 
 function PrizeCard({
   badge,
   title,
   lines,
-  highlight,
 }: {
   badge: string;
   title: string;
   lines: string[];
-  highlight?: boolean;
 }) {
   return (
     <div
       style={{
-        flex: "1 1 320px",
-        background: highlight
-          ? "linear-gradient(160deg, rgba(232,198,90,0.14), rgba(14,94,99,0.4))"
-          : "rgba(6,24,27,0.5)",
-        border: `2px solid ${highlight ? "var(--gold)" : "rgba(76,212,230,0.35)"}`,
-        borderRadius: 14,
-        padding: "28px 24px",
+        width: "100%",
+        maxWidth: 680,
+        margin: "0 auto",
+        background: "rgba(6,24,27,0.72)",
+        border: "1px solid rgba(76,212,230,0.35)",
+        borderLeft: "5px solid var(--gold)",
+        borderRadius: 12,
+        padding: "22px 26px",
+        backdropFilter: "blur(2px)",
       }}
     >
       <span
@@ -31,16 +30,16 @@ function PrizeCard({
           display: "inline-block",
           fontSize: "0.85rem",
           letterSpacing: "1.5px",
-          color: highlight ? "var(--gold)" : "var(--cyan)",
-          marginBottom: 10,
+          color: "var(--gold)",
+          marginBottom: 8,
         }}
       >
         {badge}
       </span>
-      <h3 className="display" style={{ fontSize: "1.9rem", color: "var(--cream)", marginBottom: 14 }}>
+      <h3 className="display" style={{ fontSize: "1.5rem", color: "var(--cream)", marginBottom: 10 }}>
         {title}
       </h3>
-      <ul style={{ listStyle: "none", display: "grid", gap: 8 }}>
+      <ul style={{ listStyle: "none", display: "grid", gap: 6 }}>
         {lines.map((l) => (
           <li key={l} style={{ fontSize: "0.98rem", color: "var(--cream)", opacity: 0.92 }}>
             {l}
@@ -53,105 +52,106 @@ function PrizeCard({
 
 export default function Giveaway() {
   return (
-    <section
-      id="prizes"
-      className="pattern"
-      style={{
-        position: "relative",
-        background: "var(--teal-deep)",
-        overflow: "hidden",
-        borderTop: "5px solid var(--gold)",
-      }}
-    >
-      {/* ---- Samoa background photo + teal overlay for legibility ---- */}
+    <section id="prizes" style={{ position: "relative", overflow: "hidden" }}>
+      {/* ---- Bright Samoa beach background (fixed = parallax feel) ---- */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 0,
-          backgroundImage: "url(/bg-samoa-sunset.jpg)",
+          backgroundImage: "url(/bg-samoa-trip.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       />
+      {/* Lighter overlay so the turquoise stays bright */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(180deg, rgba(8,42,46,0.80) 0%, rgba(14,94,99,0.66) 45%, rgba(6,24,27,0.95) 100%)",
+            "linear-gradient(180deg, rgba(10,70,96,0.45) 0%, rgba(8,42,52,0.68) 55%, rgba(6,26,34,0.82) 100%)",
         }}
       />
 
-      {/* Gold tatau pattern bands down both edges (poster framing) */}
-      <PatternBands opacity={0.4} />
-
-      <div className="container" style={{ position: "relative", zIndex: 2 }}>
-        <div style={{ textAlign: "center", marginBottom: 40, textShadow: "0 2px 12px rgba(0,0,0,0.55)" }}>
-          <p className="script" style={{ fontSize: "clamp(1.4rem,5vw,2.2rem)" }}>
+      <div className="container" style={{ position: "relative", zIndex: 2, paddingTop: 80, paddingBottom: 90 }}>
+        {/* ---- Poster-style heading ---- */}
+        <div style={{ textAlign: "center", marginBottom: 34, textShadow: "0 3px 16px rgba(0,0,0,0.55)" }}>
+          <h2
+            className="display"
+            style={{ fontSize: "clamp(3rem, 13vw, 8rem)", color: "var(--cream)", lineHeight: 0.92 }}
+          >
             Win a Trip to
-          </p>
-          <h2 className="display gold-metallic" style={{ fontSize: "clamp(2.4rem,9vw,4.5rem)" }}>
-            Samoa
           </h2>
-          <p style={{ maxWidth: 560, margin: "14px auto 0", opacity: 0.9 }}>
-            Enter below for your chance to win one of three prizes at Samoa Beach
-            Resort.
-          </p>
-
-          {/* ---- Partnership lockup: King's Siva x Beautiful Samoa ---- */}
-          <div style={{ marginTop: 28 }}>
-            <p
-              style={{
-                fontSize: "0.72rem",
-                letterSpacing: "2px",
-                textTransform: "uppercase",
-                opacity: 0.8,
-                marginBottom: 12,
-              }}
-            >
-              In partnership with
-            </p>
-            <div style={{ display: "inline-block" }}>
-              <Image
-                src="/partnership-lockup.png"
-                alt="King's Siva Academy × Beautiful Samoa (Samoa Tourism Authority)"
-                width={340}
-                height={189}
-                style={{
-                  objectFit: "contain",
-                  height: "auto",
-                  width: "min(340px, 72vw)",
-                  filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.4))",
-                }}
-                priority
-              />
-            </div>
+          <div style={{ marginTop: 10 }}>
+            <Image
+              src="/beautiful-samoa.png"
+              alt="Beautiful Samoa"
+              width={520}
+              height={300}
+              style={{ width: "min(520px, 82vw)", height: "auto", margin: "0 auto", display: "block" }}
+              priority
+            />
           </div>
         </div>
 
-        {/* ---- Prize cards ---- */}
-        <div style={{ display: "flex", gap: 20, flexWrap: "wrap", marginBottom: 56 }}>
+        {/* ---- Prize boxes, stacked ---- */}
+        <div style={{ display: "grid", gap: 16, marginBottom: 36 }}>
           <PrizeCard
-            highlight
             badge="1st Prize"
             title="Flights + 3 Nights in Samoa"
             lines={[
-              "Return flights to Samoa",
-              "3 nights at Samoa Beach Resort",
-              "One lucky winner",
+              "1 return flight to Samoa via Fiji Airways",
+              "3 nights accommodation at Samoa Beach Resort",
             ]}
           />
           <PrizeCard
             badge="2nd Prize — 2 Winners"
             title="4 Nights at Samoa Beach Resort"
             lines={[
-              "Two winners — four nights each",
+              "Two winners — four nights accommodation each",
               "Deluxe Oceanview room for 2 adults",
               "Breakfast, Wi-Fi & welcome drink included",
             ]}
           />
+        </div>
+
+        {/* ---- Primary CTA ---- */}
+        <div style={{ textAlign: "center", marginBottom: 14 }}>
+          <a
+            href="#giveaway"
+            className="btn btn-gold"
+            style={{ fontSize: "clamp(1.4rem, 5vw, 2rem)", padding: "22px 60px" }}
+          >
+            Enter to Win
+          </a>
+        </div>
+        <p style={{ textAlign: "center", fontSize: "0.82rem", opacity: 0.85, marginBottom: 54 }}>
+          Entries open 21 November and close 29 November 2026. Winner drawn 30
+          November.{" "}
+          <a href="/terms" className="text-cyan" style={{ textDecoration: "underline" }}>
+            Full T&amp;Cs
+          </a>
+          .
+        </p>
+
+        {/* ---- Partners ---- */}
+        <div style={{ textAlign: "center", marginBottom: 60 }}>
+          <p style={{ fontSize: "0.7rem", letterSpacing: "2px", textTransform: "uppercase", opacity: 0.75, marginBottom: 14 }}>
+            In partnership with
+          </p>
+          <Image
+            src="/partnership-lockup.png"
+            alt="King's Siva Academy × Beautiful Samoa"
+            width={320}
+            height={178}
+            style={{ width: "min(300px, 70vw)", height: "auto", margin: "0 auto", filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.4))" }}
+          />
+          <p style={{ fontSize: "0.78rem", opacity: 0.8, marginTop: 14 }}>
+            Prizes provided by Samoa Beach Resort &amp; Fiji Airways.
+          </p>
         </div>
 
         {/* ---- Entry form (posts to /api/subscribe -> Mailchimp) ---- */}
@@ -160,7 +160,7 @@ export default function Giveaway() {
           style={{
             maxWidth: 560,
             margin: "0 auto",
-            background: "rgba(6,24,27,0.72)",
+            background: "rgba(6,24,27,0.82)",
             border: "2px solid var(--gold)",
             borderRadius: 16,
             padding: "32px 26px",
@@ -175,7 +175,6 @@ export default function Giveaway() {
           <p style={{ textAlign: "center", fontSize: "0.9rem", opacity: 0.85, marginBottom: 22 }}>
             One entry per person. Open to Brisbane residents 18+.
           </p>
-
           <EntryForm />
         </div>
       </div>

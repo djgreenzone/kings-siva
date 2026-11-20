@@ -26,9 +26,8 @@ export default function Terms() {
       </Clause>
 
       <Clause n="3" h="Entry Period">
-        Entries open when the giveaway goes live and close at the drawing time
-        stated below.{" "}
-        <Todo>Insert exact entry open date/time and close date/time (AEST).</Todo>
+        Entries open on 21 November 2026 and close at 11:59 PM AEST on 29 November
+        2026. Entries received after the closing time will not be accepted.
       </Clause>
 
       <Clause n="4" h="Eligibility">
@@ -40,9 +39,9 @@ export default function Terms() {
       </Clause>
 
       <Clause n="5" h="Prizes">
-        <strong className="text-gold">First Prize (1 winner):</strong> Return
-        flights to Samoa plus three (3) nights&rsquo; accommodation at Samoa Beach
-        Resort.
+        <strong className="text-gold">First Prize (1 winner):</strong> One (1)
+        return flight to Samoa via Fiji Airways, plus three (3) nights&rsquo;
+        accommodation at Samoa Beach Resort.
         <br />
         <br />
         <strong className="text-gold">Second Prize (2 winners):</strong> Each
@@ -53,7 +52,7 @@ export default function Terms() {
         12:00 PM.
         <br />
         <br />
-        <Todo>Confirm total prize value (AUD), flight origin/airline and any travel date windows for First Prize.</Todo>
+        <Todo>Confirm total prize value (AUD), flight origin city and any travel date windows/blackout dates for the First Prize flight.</Todo>
       </Clause>
 
       <Clause n="6" h="Prize Conditions">
@@ -74,9 +73,9 @@ export default function Terms() {
       </Clause>
 
       <Clause n="7" h="The Draw">
-        Winners will be drawn at random from all valid entries. The draw will take
-        place at a King&rsquo;s Siva Academy event showcase.{" "}
-        <Todo>Insert exact draw date, time and event name/location.</Todo>
+        Winners will be drawn at random from all valid entries on 30 November
+        2026.{" "}
+        <Todo>Confirm draw time and location/event (if the draw is held at a King&rsquo;s Siva Academy event).</Todo>
       </Clause>
 
       <Clause n="8" h="Winner Notification">

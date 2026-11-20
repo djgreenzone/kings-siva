@@ -79,33 +79,13 @@ export default function Hero() {
           To teach, inspire &amp; empower the next generation of Samoans in
           Australia.
         </p>
-        <div
-          style={{
-            display: "flex",
-            gap: 16,
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
+        <a
+          href="#giveaway"
+          className="btn btn-gold"
+          style={{ fontSize: "clamp(1.1rem, 4vw, 1.5rem)", padding: "22px 52px" }}
         >
-          <a
-            href="#giveaway"
-            className="btn btn-gold"
-            style={{ fontSize: "1.4rem", padding: "22px 48px" }}
-          >
-            Win a Trip to Samoa
-          </a>
-          <a
-            href="#prizes"
-            className="btn"
-            style={{
-              background: "transparent",
-              border: "2px solid var(--cyan)",
-              color: "var(--cyan)",
-            }}
-          >
-            See the Prizes
-          </a>
-        </div>
+          Win a Trip to Samoa
+        </a>
       </div>
     </div>
   );

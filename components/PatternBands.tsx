@@ -3,7 +3,7 @@
  * the signature framing from the FIAFIA 26 / Measina posters.
  */
 export default function PatternBands({
-  width = "clamp(20px, 6vw, 68px)",
+  width = "clamp(30px, 8vw, 72px)",
   opacity = 0.55,
 }: {
   width?: string;
