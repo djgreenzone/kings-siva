@@ -61,8 +61,8 @@ export default function Hero() {
         <h1
           className="display gold-metallic"
           style={{
-            fontSize: "clamp(2.8rem, 12vw, 7rem)",
-            maxWidth: 1000,
+            fontSize: "clamp(3.2rem, 13vw, 8.2rem)",
+            maxWidth: 1050,
           }}
         >
           King&rsquo;s Siva Academy
