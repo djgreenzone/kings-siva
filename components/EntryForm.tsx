@@ -63,18 +63,49 @@ export default function EntryForm() {
       <Field name="lastName" label="Last name" required />
       <Field name="email" label="Email address" type="email" required />
       <Field name="postcode" label="Post code" required />
-      <Field name="phone" label="Mobile (optional)" type="tel" />
+      <Field name="phone" label="Mobile number" type="tel" required placeholder="+61 000 000 000" />
 
       <label style={checkRow}>
-        <input type="checkbox" required /> I confirm I am 18+ and a Brisbane
-        resident.
+        <input type="checkbox" required style={{ marginTop: 3 }} /> I confirm I am
+        18+ and a Brisbane resident.
       </label>
       <label style={checkRow}>
-        <input type="checkbox" required /> I agree to the{" "}
+        <input type="checkbox" required style={{ marginTop: 3 }} /> I agree to the{" "}
         <a href="/terms" className="text-cyan" style={{ textDecoration: "underline" }}>
           competition terms
         </a>
         .
+      </label>
+      <label style={{ ...checkRow, fontSize: "0.78rem", opacity: 0.85 }}>
+        <input type="checkbox" required style={{ marginTop: 3 }} />
+        <span>
+          King&rsquo;s Siva Academy 🇼🇸 — By providing your phone number and
+          checking the box, you agree to receive promotional and marketing
+          messages, notifications, and customer service communications from
+          King&rsquo;s Siva Academy 🇼🇸. Message and data rates may apply. Consent
+          is not a condition of purchase. Message frequency varies. Text HELP for
+          help. Text STOP to cancel.{" "}
+          <a
+            href="http://eepurl.com/iYwTc-"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan"
+            style={{ textDecoration: "underline" }}
+          >
+            See terms
+          </a>
+          ,{" "}
+          <a
+            href="http://eepurl.com/iYwTaw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan"
+            style={{ textDecoration: "underline" }}
+          >
+            See Privacy Policy
+          </a>
+          .
+        </span>
       </label>
 
       {/* Honeypot — hidden from humans, catches bots */}
@@ -119,11 +150,13 @@ function Field({
   label,
   type = "text",
   required,
+  placeholder,
 }: {
   name: string;
   label: string;
   type?: string;
   required?: boolean;
+  placeholder?: string;
 }) {
   return (
     <label style={{ display: "grid", gap: 6 }}>
@@ -135,6 +168,7 @@ function Field({
         name={name}
         type={type}
         required={required}
+        placeholder={placeholder}
         style={{
           width: "100%",
           padding: "12px 14px",

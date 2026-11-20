@@ -6,12 +6,12 @@ export default function Hero() {
         minHeight: "100svh",
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
         overflow: "hidden",
       }}
     >
-      {/* ---- Background video ----
-          Drop your file at /public/hero.mp4 (and optional /public/hero-poster.jpg).
-          Muted + playsInline + loop so it autoplays on mobile. */}
+      {/* ---- Background video ---- */}
       <video
         autoPlay
         muted
@@ -30,51 +30,64 @@ export default function Hero() {
         <source src="/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Teal gradient overlay for text legibility */}
+      {/* Teal gradient overlay for legibility */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(180deg, rgba(8,42,46,0.75) 0%, rgba(14,94,99,0.6) 45%, rgba(6,24,27,0.92) 100%)",
+            "linear-gradient(180deg, rgba(8,42,46,0.72) 0%, rgba(14,94,99,0.55) 45%, rgba(6,24,27,0.96) 100%)",
         }}
       />
 
       <div
         className="container"
-        style={{ position: "relative", zIndex: 2, paddingTop: 90, paddingBottom: 60 }}
+        style={{
+          position: "relative",
+          zIndex: 2,
+          paddingTop: 110,
+          paddingBottom: 70,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
-        <p
-          className="script"
-          style={{ fontSize: "clamp(1.6rem, 6vw, 2.6rem)", marginBottom: 6 }}
-        >
-          Beautiful Samoa
-        </p>
         <h1
           className="display"
           style={{
-            fontSize: "clamp(2.8rem, 12vw, 6.5rem)",
+            fontSize: "clamp(2.8rem, 12vw, 7rem)",
             color: "var(--cream)",
-            maxWidth: 900,
+            maxWidth: 1000,
           }}
         >
           King&rsquo;s Siva <span className="text-gold">Academy</span>
         </h1>
         <p
           style={{
-            fontSize: "clamp(1rem, 3.5vw, 1.4rem)",
+            fontSize: "clamp(1rem, 3.5vw, 1.45rem)",
             maxWidth: 620,
             marginTop: 18,
-            marginBottom: 34,
+            marginBottom: 38,
             color: "var(--cream)",
           }}
         >
           To teach, inspire &amp; empower the next generation of Samoans in
           Australia.
         </p>
-        <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-          <a href="#giveaway" className="btn btn-gold">
+        <div
+          style={{
+            display: "flex",
+            gap: 16,
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          <a
+            href="#giveaway"
+            className="btn btn-gold"
+            style={{ fontSize: "1.4rem", padding: "22px 48px" }}
+          >
             Win a Trip to Samoa
           </a>
           <a

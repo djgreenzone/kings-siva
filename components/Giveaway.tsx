@@ -55,7 +55,12 @@ export default function Giveaway() {
     <section
       id="prizes"
       className="pattern"
-      style={{ position: "relative", background: "var(--teal-deep)", overflow: "hidden" }}
+      style={{
+        position: "relative",
+        background: "var(--teal-deep)",
+        overflow: "hidden",
+        borderTop: "5px solid var(--gold)",
+      }}
     >
       {/* ---- Samoa background photo + teal overlay for legibility ---- */}
       <div
@@ -74,12 +79,12 @@ export default function Giveaway() {
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(180deg, rgba(8,42,46,0.92) 0%, rgba(14,94,99,0.82) 50%, rgba(6,24,27,0.94) 100%)",
+            "linear-gradient(180deg, rgba(8,42,46,0.80) 0%, rgba(14,94,99,0.66) 45%, rgba(6,24,27,0.95) 100%)",
         }}
       />
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
+        <div style={{ textAlign: "center", marginBottom: 40, textShadow: "0 2px 12px rgba(0,0,0,0.55)" }}>
           <p className="script" style={{ fontSize: "clamp(1.4rem,5vw,2.2rem)" }}>
             Win a Trip to
           </p>
@@ -104,20 +109,18 @@ export default function Giveaway() {
             >
               In partnership with
             </p>
-            <div
-              style={{
-                display: "inline-block",
-                background: "var(--cream)",
-                borderRadius: 14,
-                padding: "18px 30px",
-              }}
-            >
+            <div style={{ display: "inline-block" }}>
               <Image
                 src="/partnership-lockup.png"
                 alt="King's Siva Academy × Beautiful Samoa (Samoa Tourism Authority)"
-                width={320}
-                height={178}
-                style={{ objectFit: "contain", height: "auto", width: "min(320px, 70vw)" }}
+                width={340}
+                height={189}
+                style={{
+                  objectFit: "contain",
+                  height: "auto",
+                  width: "min(340px, 72vw)",
+                  filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.4))",
+                }}
                 priority
               />
             </div>

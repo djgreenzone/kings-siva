@@ -50,12 +50,13 @@ export async function POST(req: Request) {
   const auth = "Basic " + Buffer.from(`anystring:${API_KEY}`).toString("base64");
   const subscriberHash = crypto.createHash("md5").update(email).digest("hex");
 
-  // ---- Merge fields: rename these tags to match YOUR audience's merge tags ----
+  // ---- Merge fields matched to the King's Siva Academy audience (us21 / ad88253946) ----
+  // First Name=MMERGE1, Last Name=LNAME, Email=EMAIL, Post Code=MMERGE14, Phone=PHONE
   const merge_fields: Record<string, string> = {
-    FNAME: body.firstName || "",
+    MMERGE1: body.firstName || "",
     LNAME: body.lastName || "",
+    MMERGE14: body.postcode || "",
     PHONE: body.phone || "",
-    POSTCODE: body.postcode || "", // <-- set to your real post-code merge tag
   };
 
   try {

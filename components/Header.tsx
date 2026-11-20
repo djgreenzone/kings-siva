@@ -9,35 +9,16 @@ export default function Header() {
         left: 0,
         right: 0,
         zIndex: 20,
-        padding: "18px 0",
+        padding: "22px 0",
       }}
     >
       <div
         className="container"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
+        style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        {/* Replace /logo.png in /public with the King's Siva Academy logo */}
-        <a href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <Image
-            src="/logo.png"
-            alt="King's Siva Academy"
-            width={54}
-            height={54}
-            priority
-          />
-          <span
-            className="display"
-            style={{ fontSize: "1.05rem", color: "var(--cream)" }}
-          >
-            King&rsquo;s Siva Academy
-          </span>
-        </a>
-        <a href="#giveaway" className="btn btn-cyan" style={{ fontSize: "0.95rem", padding: "12px 22px" }}>
-          Enter Now
+        {/* Logo only — King's Siva Academy */}
+        <a href="/" aria-label="King's Siva Academy">
+          <Image src="/logo.png" alt="King's Siva Academy" width={64} height={64} priority />
         </a>
       </div>
     </header>
