@@ -1,0 +1,99 @@
+:root {
+  /* ---- Brand palette (from FIAFIA 26 / Measina artwork) ---- */
+  --teal-deep: #0e5e63;
+  --teal-dark: #082a2e;
+  --teal-mid: #1aa0a6;
+  --gold: #e8c65a;
+  --gold-deep: #c8972e;
+  --gold-light: #f2d772;
+  --cyan: #4cd4e6;
+  --cream: #f5f1e4;
+  --ink: #06181b;
+
+  --maxw: 1200px;
+
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-script: "Kaushan Script", cursive;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--cream);
+  background: var(--teal-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img, video { display: block; max-width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- Tribal line texture used behind sections ---- */
+.pattern {
+  position: relative;
+}
+.pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(76, 212, 230, 0.04) 0 2px,
+      transparent 2px 22px
+    );
+  pointer-events: none;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: 16px 34px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-gold {
+  background: linear-gradient(180deg, var(--gold-light), var(--gold-deep));
+  color: var(--ink);
+  box-shadow: 0 6px 18px rgba(200, 151, 46, 0.35);
+}
+.btn-cyan {
+  background: var(--cyan);
+  color: var(--ink);
+}
+.btn:hover { transform: translateY(-2px); }
+
+/* ---- Headings ---- */
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: 0.5px;
+}
+.script {
+  font-family: var(--font-script);
+  color: var(--gold);
+}
+.text-cyan { color: var(--cyan); }
+.text-gold { color: var(--gold); }
+
+/* ---- Section rhythm ---- */
+section { padding: 72px 0; }
+@media (min-width: 768px) { section { padding: 96px 0; } }

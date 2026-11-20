@@ -1,0 +1,112 @@
+import type { Metadata } from "next";
+import { LegalPage, Clause, Todo } from "@/components/Legal";
+
+export const metadata: Metadata = {
+  title: "Competition Terms & Conditions — King's Siva Academy",
+};
+
+export default function Terms() {
+  return (
+    <LegalPage
+      title="Competition Terms & Conditions"
+      subtitle={"King’s Siva Academy — “Win a Trip to Samoa” Giveaway"}
+    >
+      <Clause n="1" h="The Promoter">
+        This promotion is run by King&rsquo;s Siva Academy (the
+        &ldquo;Promoter&rdquo;), based in Queensland, Australia.{" "}
+        <Todo>Insert registered legal/business name, ABN and business address.</Todo>
+      </Clause>
+
+      <Clause n="2" h="How to Enter">
+        To enter, complete the official entry form on this website with your name,
+        email address and required details, and confirm you accept these terms.
+        Entry is free. No purchase is necessary. Entries are collected via the
+        Promoter&rsquo;s mailing list (Mailchimp). Only entries submitted through
+        the official form will be accepted.
+      </Clause>
+
+      <Clause n="3" h="Entry Period">
+        Entries open when the giveaway goes live and close at the drawing time
+        stated below.{" "}
+        <Todo>Insert exact entry open date/time and close date/time (AEST).</Todo>
+      </Clause>
+
+      <Clause n="4" h="Eligibility">
+        The promotion is open only to residents of Brisbane, Queensland,
+        Australia, who are 18 years of age or older at the time of entry.
+        Employees, contractors and immediate family members of the Promoter,
+        Samoa Beach Resort, and associated agencies are not eligible. One (1)
+        entry per person; duplicate or automated entries will be disqualified.
+      </Clause>
+
+      <Clause n="5" h="Prizes">
+        <strong className="text-gold">First Prize (1 winner):</strong> Return
+        flights to Samoa plus three (3) nights&rsquo; accommodation at Samoa Beach
+        Resort.
+        <br />
+        <br />
+        <strong className="text-gold">Second Prize (2 winners):</strong> Each
+        winner receives a complimentary four (4) night stay at Samoa Beach Resort
+        in a Deluxe Oceanview King/Double/Twin room for two (2) adults.
+        Inclusions: breakfast for up to 2 adults, Wi-Fi, a welcome coconut drink
+        and use of non-motorized water equipment. Check-in 3:00 PM, check-out
+        12:00 PM.
+        <br />
+        <br />
+        <Todo>Confirm total prize value (AUD), flight origin/airline and any travel date windows for First Prize.</Todo>
+      </Clause>
+
+      <Clause n="6" h="Prize Conditions">
+        Accommodation vouchers are valid for stays until March 2027. Vouchers are
+        not redeemable for cash, are non-transferable, and resale is prohibited.
+        An extra person is chargeable at AUD $80 per room, per night, payable by
+        the winner. Lost, stolen or destroyed vouchers, or vouchers used without
+        permission, will not be replaced. Flights, accommodation and travel dates
+        are subject to availability and must be booked and taken within the
+        validity period. Winners are responsible for all costs not expressly
+        included in the prize (including transfers, meals other than those stated,
+        travel insurance, visas and incidentals). Second-prize accommodation is
+        redeemed by emailing{" "}
+        <a href="mailto:Sales.Events@samoabeachresort.com" className="text-cyan">
+          Sales.Events@samoabeachresort.com
+        </a>
+        .
+      </Clause>
+
+      <Clause n="7" h="The Draw">
+        Winners will be drawn at random from all valid entries. The draw will take
+        place at a King&rsquo;s Siva Academy event showcase.{" "}
+        <Todo>Insert exact draw date, time and event name/location.</Todo>
+      </Clause>
+
+      <Clause n="8" h="Winner Notification">
+        Winners will be notified by email and/or phone using the details provided
+        at entry, and may be announced at the event and on King&rsquo;s Siva
+        Academy social channels.{" "}
+        <Todo>Confirm notification method and claim window (e.g. prize must be claimed within 14 days or redrawn).</Todo>
+      </Clause>
+
+      <Clause n="9" h="Privacy">
+        By entering, you consent to King&rsquo;s Siva Academy collecting and
+        storing your details and adding you to its mailing list, as described in
+        our{" "}
+        <a href="/privacy" className="text-cyan" style={{ textDecoration: "underline" }}>
+          Privacy Policy
+        </a>
+        . You may unsubscribe at any time.
+      </Clause>
+
+      <Clause n="10" h="General">
+        The Promoter&rsquo;s decision is final and no correspondence will be
+        entered into. The Promoter reserves the right to verify the validity of
+        entries and to disqualify any entrant who tampers with the entry process
+        or breaches these terms. If a prize is unavailable, the Promoter may
+        substitute a prize of equal or greater value. To the extent permitted by
+        law, the Promoter is not liable for any loss or damage arising from this
+        promotion or the use of a prize. This promotion is not administered by or
+        associated with Mailchimp, Meta, Instagram or Facebook. As the Promoter is
+        based in Queensland, no trade-promotion permit is required.
+      </Clause>
+    </LegalPage>
+  );
+}
