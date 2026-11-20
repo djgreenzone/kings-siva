@@ -1,3 +1,5 @@
+import PatternBands from "./PatternBands";
+
 export default function Hero() {
   return (
     <div
@@ -41,6 +43,9 @@ export default function Hero() {
         }}
       />
 
+      {/* Gold tatau pattern bands down both edges (poster framing) */}
+      <PatternBands />
+
       <div
         className="container"
         style={{
@@ -54,14 +59,13 @@ export default function Hero() {
         }}
       >
         <h1
-          className="display"
+          className="display gold-metallic"
           style={{
             fontSize: "clamp(2.8rem, 12vw, 7rem)",
-            color: "var(--cream)",
             maxWidth: 1000,
           }}
         >
-          King&rsquo;s Siva <span className="text-gold">Academy</span>
+          King&rsquo;s Siva Academy
         </h1>
         <p
           style={{

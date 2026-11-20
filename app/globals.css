@@ -94,6 +94,29 @@ img, video { display: block; max-width: 100%; }
 .text-cyan { color: var(--cyan); }
 .text-gold { color: var(--gold); }
 
+/* Metallic gold headline (FIAFIA 26 poster style) */
+.gold-metallic {
+  background: linear-gradient(180deg, #f8e98f 0%, #e8c65a 30%, #c8972e 62%, #f2d772 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+/* Small gold "presents / label" banner from the posters */
+.gold-banner {
+  display: inline-block;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold-deep));
+  color: var(--ink);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 18px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
 /* ---- Section rhythm ---- */
 section { padding: 72px 0; }
 @media (min-width: 768px) { section { padding: 96px 0; } }

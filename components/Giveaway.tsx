@@ -1,5 +1,6 @@
 import Image from "next/image";
 import EntryForm from "./EntryForm";
+import PatternBands from "./PatternBands";
 
 function PrizeCard({
   badge,
@@ -83,12 +84,15 @@ export default function Giveaway() {
         }}
       />
 
+      {/* Gold tatau pattern bands down both edges (poster framing) */}
+      <PatternBands opacity={0.4} />
+
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         <div style={{ textAlign: "center", marginBottom: 40, textShadow: "0 2px 12px rgba(0,0,0,0.55)" }}>
           <p className="script" style={{ fontSize: "clamp(1.4rem,5vw,2.2rem)" }}>
             Win a Trip to
           </p>
-          <h2 className="display" style={{ fontSize: "clamp(2.4rem,9vw,4.5rem)", color: "var(--gold)" }}>
+          <h2 className="display gold-metallic" style={{ fontSize: "clamp(2.4rem,9vw,4.5rem)" }}>
             Samoa
           </h2>
           <p style={{ maxWidth: 560, margin: "14px auto 0", opacity: 0.9 }}>
