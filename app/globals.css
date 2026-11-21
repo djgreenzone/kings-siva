@@ -112,9 +112,19 @@ img, video { display: block; max-width: 100%; }
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 100%);
 }
+/* MOBILE — perfect, do not change */
 @media (max-width: 768px) {
   .hero-v {
     background-size: auto 78%;
+  }
+}
+/* DESKTOP ONLY — cropped V (apex at the image's bottom edge) anchored to the bottom,
+   a quarter bigger, so the inside apex sits low and submerges behind the black gradient. */
+@media (min-width: 769px) {
+  .hero-v {
+    background-image: url(/pattern-v-desktop.png);
+    background-position: center bottom;
+    background-size: auto 122%;
   }
 }
 
