@@ -5,7 +5,7 @@ export default function LiveStream() {
   return (
     <section
       id="livestream"
-      style={{ position: "relative", background: "#000", overflow: "hidden", padding: "80px 0" }}
+      style={{ position: "relative", background: "#000", overflow: "hidden", padding: "300px 0 260px" }}
     >
       {/* White tatau pattern, faint, shown only in the middle (fades to black at the edges) */}
       <div
