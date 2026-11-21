@@ -25,29 +25,8 @@ export default function Hero() {
         <source src="/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Gold V (original orientation) — showing only the wide upper section (the red-box area);
-          apex pushed well below the fold, and the ends fade off top & bottom. BEHIND the black gradient. */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          top: "-6%",
-          height: "95%",
-          zIndex: 1,
-          backgroundImage: "url(/pattern-v-gold.png)",
-          backgroundSize: "162% auto",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center top",
-          opacity: 0.6,
-          WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 14%, rgba(0,0,0,1) 38%, rgba(0,0,0,0.6) 66%, transparent 92%)",
-          maskImage:
-            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 14%, rgba(0,0,0,1) 38%, rgba(0,0,0,0.6) 66%, transparent 92%)",
-          pointerEvents: "none",
-        }}
-      />
+      {/* Gold V — positioning handled by .hero-v (responsive: smaller on desktop, lower on mobile) */}
+      <div className="hero-v" aria-hidden="true" />
 
       {/* Black gradient ON TOP of the V — rises a quarter up, submerging the pattern from the bottom */}
       <div

@@ -94,6 +94,31 @@ img, video { display: block; max-width: 100%; }
 .text-cyan { color: var(--cyan); }
 .text-gold { color: var(--gold); }
 
+/* Hero gold V pattern — original orientation, apex pushed below, ends fade.
+   Desktop: smaller/contained. Mobile: larger + lower so the apex lands near the CTA. */
+.hero-v {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  height: 86%;
+  background-image: url(/pattern-v-gold.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 118% auto;
+  opacity: 0.55;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 12%, #000 38%, rgba(0,0,0,0.55) 66%, transparent 92%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 12%, #000 38%, rgba(0,0,0,0.55) 66%, transparent 92%);
+}
+@media (max-width: 768px) {
+  .hero-v {
+    height: 116%;
+    background-size: 225% auto;
+  }
+}
+
 /* Metallic gold headline (FIAFIA 26 poster style) */
 .gold-metallic {
   background: linear-gradient(180deg, #fbe88e 0%, #f3d670 46%, #f8e187 72%, #efcf66 100%);
