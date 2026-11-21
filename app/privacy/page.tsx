@@ -15,8 +15,11 @@ export default function Privacy() {
         King&rsquo;s Siva Academy (&ldquo;we&rdquo;, &ldquo;us&rdquo;,
         &ldquo;our&rdquo;) is based in Queensland, Australia. We are committed to
         protecting your privacy in accordance with the Privacy Act 1988 (Cth) and
-        the Australian Privacy Principles (APPs).{" "}
-        <Todo>Insert registered entity name, ABN and a contact email/address.</Todo>
+        the Australian Privacy Principles (APPs). Contact us at{" "}
+        <a href="mailto:info@kingsivaacademy.com" className="text-cyan">
+          info@kingsivaacademy.com
+        </a>
+        .
       </Clause>
 
       <Clause n="2" h="Information we collect">
@@ -69,7 +72,10 @@ export default function Privacy() {
         hold about you, and you may unsubscribe from our emails at any time using
         the link in any email or by contacting us. To make a request or a privacy
         complaint, contact us at{" "}
-        <Todo>insert privacy contact email</Todo>. If you are not satisfied, you
+        <a href="mailto:info@kingsivaacademy.com" className="text-cyan">
+          info@kingsivaacademy.com
+        </a>
+        . If you are not satisfied, you
         may contact the Office of the Australian Information Commissioner (OAIC).
       </Clause>
 

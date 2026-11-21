@@ -13,8 +13,11 @@ export default function Terms() {
     >
       <Clause n="1" h="The Promoter">
         This promotion is run by King&rsquo;s Siva Academy (the
-        &ldquo;Promoter&rdquo;), based in Queensland, Australia.{" "}
-        <Todo>Insert registered legal/business name, ABN and business address.</Todo>
+        &ldquo;Promoter&rdquo;), based in Queensland, Australia. Contact:{" "}
+        <a href="mailto:info@kingsivaacademy.com" className="text-cyan">
+          info@kingsivaacademy.com
+        </a>
+        .
       </Clause>
 
       <Clause n="2" h="How to Enter">
@@ -50,13 +53,11 @@ export default function Terms() {
         Inclusions: breakfast for up to 2 adults, Wi-Fi, a welcome coconut drink
         and use of non-motorized water equipment. Check-in 3:00 PM, check-out
         12:00 PM.
-        <br />
-        <br />
-        <Todo>Confirm total prize value (AUD), flight origin city and any travel date windows/blackout dates for the First Prize flight.</Todo>
       </Clause>
 
       <Clause n="6" h="Prize Conditions">
-        Accommodation vouchers are valid for stays until March 2027. Vouchers are
+        The prize must be booked and travel completed (the stay taken) by 31
+        March 2027; accommodation vouchers are valid until that date. Vouchers are
         not redeemable for cash, are non-transferable, and resale is prohibited.
         An extra person is chargeable at AUD $80 per room, per night, payable by
         the winner. Lost, stolen or destroyed vouchers, or vouchers used without
@@ -74,15 +75,13 @@ export default function Terms() {
 
       <Clause n="7" h="The Draw">
         Winners will be drawn at random from all valid entries on 30 November
-        2026.{" "}
-        <Todo>Confirm draw time and location/event (if the draw is held at a King&rsquo;s Siva Academy event).</Todo>
+        2026 at a King&rsquo;s Siva Academy event.
       </Clause>
 
       <Clause n="8" h="Winner Notification">
-        Winners will be notified by email and/or phone using the details provided
-        at entry, and may be announced at the event and on King&rsquo;s Siva
-        Academy social channels.{" "}
-        <Todo>Confirm notification method and claim window (e.g. prize must be claimed within 14 days or redrawn).</Todo>
+        Winners will be notified by text message (SMS) or email using the details
+        provided at entry, and may be announced at the event and on King&rsquo;s
+        Siva Academy social channels.
       </Clause>
 
       <Clause n="9" h="Privacy">

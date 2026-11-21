@@ -1,3 +1,5 @@
+import Footer from "./Footer";
+
 export function LegalPage({
   title,
   subtitle,
@@ -8,11 +10,12 @@ export function LegalPage({
   children: React.ReactNode;
 }) {
   return (
-    <main style={{ background: "var(--teal-dark)", minHeight: "100vh", padding: "60px 0" }}>
-      <div className="container" style={{ maxWidth: 820 }}>
-        <a href="/" className="text-cyan" style={{ fontSize: "0.9rem" }}>
-          &larr; Back to home
-        </a>
+    <>
+      <main style={{ background: "#08090a", minHeight: "100vh", padding: "60px 0" }}>
+        <div className="container" style={{ maxWidth: 820 }}>
+          <a href="/" className="text-cyan" style={{ fontSize: "0.9rem" }}>
+            &larr; Back to home
+          </a>
         <h1
           className="display"
           style={{ fontSize: "clamp(2rem,7vw,3rem)", color: "var(--gold)", margin: "18px 0 6px" }}
@@ -31,9 +34,11 @@ export function LegalPage({
             day: "numeric",
           })}
           . Items highlighted in gold require confirmation before publishing.
-        </p>
-      </div>
-    </main>
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
 

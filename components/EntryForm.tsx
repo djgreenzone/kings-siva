@@ -171,8 +171,8 @@ function Field({
         placeholder={placeholder}
         style={{
           width: "100%",
-          padding: "12px 14px",
-          borderRadius: 8,
+          padding: "14px 20px",
+          borderRadius: 999,
           border: "1px solid rgba(76,212,230,0.4)",
           background: "rgba(245,241,228,0.06)",
           color: "var(--cream)",

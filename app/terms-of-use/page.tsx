@@ -65,8 +65,11 @@ export default function TermsOfUse() {
       <Clause n="8" h="Changes & governing law">
         We may update these Terms of Use at any time; the current version will
         always appear on this page. These terms are governed by the laws of
-        Queensland, Australia.{" "}
-        <Todo>Insert a contact email for website queries.</Todo>
+        Queensland, Australia. Contact us at{" "}
+        <a href="mailto:info@kingsivaacademy.com" className="text-cyan">
+          info@kingsivaacademy.com
+        </a>
+        .
       </Clause>
     </LegalPage>
   );
