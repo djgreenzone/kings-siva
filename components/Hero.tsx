@@ -25,35 +25,38 @@ export default function Hero() {
         <source src="/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Overlay: clear top -> teal hint -> black rising a quarter higher */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          zIndex: 1,
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(10,74,84,0.32) 34%, rgba(0,0,0,0.52) 62%, rgba(0,0,0,0.98) 100%)",
-        }}
-      />
-
-      {/* Big gold V bursting wide from a low center (point hidden below), fading up into black */}
+      {/* Gold V (original orientation) — showing only the wide upper section (the red-box area);
+          apex pushed well below the fold, and the ends fade off top & bottom. BEHIND the black gradient. */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           left: 0,
           right: 0,
-          bottom: "-22%",
-          height: "112%",
+          top: "-6%",
+          height: "95%",
           zIndex: 1,
           backgroundImage: "url(/pattern-v-gold.png)",
-          backgroundSize: "150% auto",
+          backgroundSize: "162% auto",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center bottom",
+          backgroundPosition: "center top",
           opacity: 0.6,
-          WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 45%, transparent 90%)",
-          maskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 45%, transparent 90%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 14%, rgba(0,0,0,1) 38%, rgba(0,0,0,0.6) 66%, transparent 92%)",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 14%, rgba(0,0,0,1) 38%, rgba(0,0,0,0.6) 66%, transparent 92%)",
           pointerEvents: "none",
+        }}
+      />
+
+      {/* Black gradient ON TOP of the V — rises a quarter up, submerging the pattern from the bottom */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 1,
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.14) 0%, rgba(10,74,84,0.30) 30%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.90) 76%, rgba(0,0,0,1) 100%)",
         }}
       />
 
