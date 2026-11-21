@@ -13,7 +13,7 @@ const OG_IMAGE = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Win a Trip to Samoa Giveaway | Kings Siva Academy",
+    default: "Kings Siva Academy | Win a Trip to Samoa",
     template: "%s | Kings Siva Academy",
   },
   description:
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
     locale: "en_AU",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Win a Trip to Samoa Giveaway | Kings Siva Academy",
+    title: "Kings Siva Academy | Win a Trip to Samoa",
     description:
       "Enter free to win return flights plus 3 nights at Samoa Beach Resort. A Kings Siva Academy giveaway with Beautiful Samoa. Entries close 29 November 2026.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Win a Trip to Samoa Giveaway | Kings Siva Academy",
+    title: "Kings Siva Academy | Win a Trip to Samoa",
     description:
       "Enter free to win return flights plus 3 nights at Samoa Beach Resort. A Kings Siva Academy giveaway with Beautiful Samoa.",
     images: [OG_IMAGE.url],
