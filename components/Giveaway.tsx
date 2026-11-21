@@ -132,7 +132,10 @@ export default function Giveaway() {
           <h2 className="display" style={{ fontSize: "clamp(1.8rem, 7vw, 4rem)", color: "var(--cream)", lineHeight: 0.95 }}>
             Win a Trip to
           </h2>
-          <h2 className="display gold-metallic" style={{ fontSize: "clamp(4rem, 17vw, 10rem)", lineHeight: 0.9, marginTop: 2 }}>
+          <h2
+            className="display"
+            style={{ fontSize: "clamp(5rem, 23vw, 10rem)", lineHeight: 0.9, marginTop: 2, color: "var(--gold)" }}
+          >
             Samoa
           </h2>
         </div>
