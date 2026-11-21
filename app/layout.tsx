@@ -7,7 +7,7 @@ const OG_IMAGE = {
   url: "/og.jpg",
   width: 1200,
   height: 630,
-  alt: "Win a Trip to Samoa — Kings Siva Academy giveaway. Return flights plus 3 nights at Samoa Beach Resort.",
+  alt: "Kings Siva Academy — teaching, inspiring and empowering the next generation of Samoans in Australia.",
 };
 
 export const metadata: Metadata = {
