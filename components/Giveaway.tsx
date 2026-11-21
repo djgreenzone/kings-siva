@@ -203,20 +203,6 @@ export default function Giveaway() {
             padding: "36px 30px",
           }}
         >
-          <h3 className="display" style={{ fontSize: "1.8rem", textAlign: "center", color: "var(--cream)", marginBottom: 6 }}>
-            Enter the Giveaway
-          </h3>
-          <p style={{ textAlign: "center", fontSize: "0.9rem", opacity: 0.85, marginBottom: 6 }}>
-            One entry per person. Open to Brisbane residents 18+.
-          </p>
-          <p style={{ textAlign: "center", fontSize: "0.82rem", opacity: 0.75, marginBottom: 22 }}>
-            Entries open 21 November and close 29 November 2026. Winner drawn 30
-            November.{" "}
-            <a href="/terms" className="text-cyan" style={{ textDecoration: "underline" }}>
-              Full T&amp;Cs
-            </a>
-            .
-          </p>
           <EntryForm />
         </div>
       </div>

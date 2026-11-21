@@ -46,12 +46,16 @@ export default function EntryForm() {
   if (status === "success") {
     return (
       <div style={{ textAlign: "center", padding: "20px 0" }}>
-        <h3 className="display" style={{ fontSize: "1.8rem", color: "var(--gold)" }}>
-          You&rsquo;re in! 🌴
+        <h3 className="display" style={{ fontSize: "1.8rem", color: "#ffffff" }}>
+          YOU&rsquo;RE IN🇼🇸
         </h3>
         <p style={{ opacity: 0.9, marginTop: 8 }}>
           Thanks for entering the King&rsquo;s Siva Academy &times; Beautiful Samoa
           giveaway. Winners are drawn at the event — good luck!
+        </p>
+        <p style={{ opacity: 0.8, marginTop: 10, fontSize: "0.9rem" }}>
+          Check your inbox for your confirmation email — if it&rsquo;s not there,
+          please check your spam or junk folder.
         </p>
       </div>
     );
