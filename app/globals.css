@@ -131,13 +131,17 @@ img, video { display: block; max-width: 100%; }
 
 /* Metallic gold headline (FIAFIA 26 poster style) */
 .gold-metallic {
-  /* symmetric metallic: bright gold edges + central highlight — reads the same at any size */
-  background: linear-gradient(180deg, #f2d26a 0%, #ffe9a0 30%, #fff8d6 50%, #ffe9a0 70%, #f2d26a 100%);
+  /* GAMEDAY look: bright yellow-gold foil + 3D extrude (drop-shadows scale with font size) */
+  background: linear-gradient(180deg, #fff2a6 0%, #f8db55 46%, #ffea86 60%, #f2ce46 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.28));
+  filter:
+    drop-shadow(0 0.012em 0 #caa31e)
+    drop-shadow(0 0.026em 0 #b48d1a)
+    drop-shadow(0 0.04em 0 #9f7a17)
+    drop-shadow(0 0.055em 0.05em rgba(0, 0, 0, 0.55));
 }
 
 /* ---- Prize packages (sleek single panel, two columns) ---- */
