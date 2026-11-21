@@ -1,24 +1,10 @@
 import Image from "next/image";
 import EntryForm from "./EntryForm";
 
-function PrizeCard({ badge, lines }: { badge: string; lines: string[] }) {
+function PkgCol({ badge, lines }: { badge: string; lines: string[] }) {
   return (
-    <div
-      style={{
-        flex: "1 1 320px",
-        maxWidth: 400,
-        display: "flex",
-        flexDirection: "column",
-        background: "rgba(8,22,26,0.5)",
-        backdropFilter: "blur(16px)",
-        WebkitBackdropFilter: "blur(16px)",
-        border: "1px solid rgba(255,255,255,0.14)",
-        borderRadius: 22,
-        padding: "34px 30px",
-        boxShadow: "0 18px 50px rgba(0,0,0,0.35)",
-      }}
-    >
-      <span
+    <div className="pkg-col">
+      <p
         style={{
           fontFamily: "var(--font-body)",
           fontWeight: 600,
@@ -27,11 +13,11 @@ function PrizeCard({ badge, lines }: { badge: string; lines: string[] }) {
           textTransform: "uppercase",
           color: "var(--gold)",
           textAlign: "center",
-          marginBottom: 24,
+          marginBottom: 26,
         }}
       >
         {badge}
-      </span>
+      </p>
       <ul style={{ listStyle: "none", display: "grid", gap: 18 }}>
         {lines.map((l) => (
           <li key={l} style={{ display: "flex", alignItems: "flex-start", gap: 13 }}>
@@ -50,13 +36,7 @@ function PrizeCard({ badge, lines }: { badge: string; lines: string[] }) {
               <polyline points="20 6 9 17 4 12" />
             </svg>
             <span
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "1.02rem",
-                fontWeight: 400,
-                color: "var(--cream)",
-                lineHeight: 1.45,
-              }}
+              style={{ fontFamily: "var(--font-body)", fontSize: "1.02rem", color: "var(--cream)", lineHeight: 1.45 }}
             >
               {l}
             </span>
@@ -118,28 +98,12 @@ export default function Giveaway() {
         </div>
 
         {/* ---- Packages ---- */}
-        <p
-          className="display"
-          style={{ textAlign: "center", fontSize: "0.9rem", letterSpacing: "3px", color: "var(--cyan)", marginBottom: 22, textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}
-        >
-          Packages Available
-        </p>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 20,
-            justifyContent: "center",
-            alignItems: "stretch",
-            maxWidth: 880,
-            margin: "0 auto 44px",
-          }}
-        >
-          <PrizeCard
+        <div className="pkg-panel">
+          <PkgCol
             badge="One Winner"
             lines={["1 return flight to Samoa", "3 nights at Samoa Beach Resort"]}
           />
-          <PrizeCard
+          <PkgCol
             badge="2 Winners"
             lines={[
               "4 nights at Samoa Beach Resort",

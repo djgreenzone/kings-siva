@@ -131,12 +131,40 @@ img, video { display: block; max-width: 100%; }
 
 /* Metallic gold headline (FIAFIA 26 poster style) */
 .gold-metallic {
-  background: linear-gradient(180deg, #fff2bd 0%, #f6d978 34%, #fff0ad 50%, #efcc62 70%, #ffe79e 100%);
+  /* symmetric metallic: bright gold edges + central highlight — reads the same at any size */
+  background: linear-gradient(180deg, #f2d26a 0%, #ffe9a0 30%, #fff8d6 50%, #ffe9a0 70%, #f2d26a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.28));
+}
+
+/* ---- Prize packages (sleek single panel, two columns) ---- */
+.pkg-panel {
+  max-width: 860px;
+  margin: 0 auto 46px;
+  background: rgba(6, 18, 22, 0.74);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.pkg-col {
+  flex: 1 1 300px;
+  padding: 40px 38px;
+}
+.pkg-col + .pkg-col {
+  border-left: 1px solid rgba(232, 198, 90, 0.22);
+}
+@media (max-width: 640px) {
+  .pkg-col + .pkg-col {
+    border-left: none;
+    border-top: 1px solid rgba(232, 198, 90, 0.22);
+  }
 }
 
 /* Small gold "presents / label" banner from the posters */
