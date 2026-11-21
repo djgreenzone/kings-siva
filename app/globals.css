@@ -125,6 +125,7 @@ img, video { display: block; max-width: 100%; }
     background-image: url(/pattern-v-desktop.png);
     background-position: center bottom;
     background-size: auto 122%;
+    opacity: 0.1;
   }
 }
 
