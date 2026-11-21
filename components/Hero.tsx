@@ -39,7 +39,7 @@ export default function Hero() {
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(180deg, rgba(8,42,46,0.72) 0%, rgba(14,94,99,0.55) 45%, rgba(6,24,27,0.96) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.22) 0%, rgba(10,74,84,0.38) 46%, rgba(0,0,0,0.90) 100%)",
         }}
       />
 
