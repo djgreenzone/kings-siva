@@ -1,5 +1,4 @@
 import Image from "next/image";
-import PatternBands from "./PatternBands";
 
 export default function Footer() {
   return (
@@ -11,9 +10,6 @@ export default function Footer() {
         padding: "56px clamp(20px, 5vw, 64px) 40px",
       }}
     >
-      {/* Gold V-pattern edges */}
-      <PatternBands opacity={0.45} />
-
       <div style={{ position: "relative", zIndex: 2, width: "100%" }}>
         <div
           style={{
