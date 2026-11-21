@@ -6,55 +6,60 @@ function PrizeCard({ badge, lines }: { badge: string; lines: string[] }) {
     <div
       style={{
         flex: "1 1 320px",
-        maxWidth: 420,
+        maxWidth: 400,
         display: "flex",
         flexDirection: "column",
-        background: "linear-gradient(170deg, rgba(10,42,48,0.96), rgba(4,15,18,0.97))",
-        border: "1px solid rgba(232,198,90,0.4)",
-        borderRadius: 18,
-        overflow: "hidden",
-        boxShadow: "0 14px 44px rgba(0,0,0,0.45)",
+        background: "rgba(8,22,26,0.5)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        border: "1px solid rgba(255,255,255,0.14)",
+        borderRadius: 22,
+        padding: "34px 30px",
+        boxShadow: "0 18px 50px rgba(0,0,0,0.35)",
       }}
     >
-      {/* Gold header band */}
-      <div
+      <span
         style={{
-          background: "linear-gradient(180deg, var(--gold-light), var(--gold-deep))",
-          padding: "16px 20px",
+          fontFamily: "var(--font-body)",
+          fontWeight: 600,
+          fontSize: "0.76rem",
+          letterSpacing: "3.5px",
+          textTransform: "uppercase",
+          color: "var(--gold)",
           textAlign: "center",
+          marginBottom: 24,
         }}
       >
-        <span
-          className="display"
-          style={{ color: "var(--ink)", fontSize: "1.3rem", letterSpacing: "2px", textTransform: "uppercase" }}
-        >
-          {badge}
-        </span>
-      </div>
-      {/* Inclusions checklist */}
-      <ul style={{ listStyle: "none", display: "grid", gap: 16, padding: "26px 24px", flex: 1 }}>
+        {badge}
+      </span>
+      <ul style={{ listStyle: "none", display: "grid", gap: 18 }}>
         {lines.map((l) => (
-          <li key={l} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-            <span
+          <li key={l} style={{ display: "flex", alignItems: "flex-start", gap: 13 }}>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--gold)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{ flexShrink: 0, marginTop: 3 }}
               aria-hidden="true"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span
               style={{
-                flexShrink: 0,
-                width: 22,
-                height: 22,
-                borderRadius: 999,
-                background: "var(--gold)",
-                color: "var(--ink)",
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                marginTop: 2,
+                fontFamily: "var(--font-body)",
+                fontSize: "1.02rem",
+                fontWeight: 400,
+                color: "var(--cream)",
+                lineHeight: 1.45,
               }}
             >
-              ✓
+              {l}
             </span>
-            <span style={{ fontSize: "1.02rem", color: "var(--cream)", lineHeight: 1.35 }}>{l}</span>
           </li>
         ))}
       </ul>
