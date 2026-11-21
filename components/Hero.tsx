@@ -35,7 +35,7 @@ export default function Hero() {
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.14) 0%, rgba(10,74,84,0.30) 30%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.90) 76%, rgba(0,0,0,1) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(10,74,84,0.28) 26%, rgba(0,0,0,0.60) 48%, rgba(0,0,0,0.90) 70%, rgba(0,0,0,1) 86%)",
         }}
       />
 

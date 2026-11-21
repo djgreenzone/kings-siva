@@ -98,24 +98,23 @@ img, video { display: block; max-width: 100%; }
    Desktop: smaller/contained. Mobile: larger + lower so the apex lands near the CTA. */
 .hero-v {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  inset: 0;
   z-index: 1;
-  height: 86%;
   background-image: url(/pattern-v-gold.png);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 118% auto;
-  opacity: 0.55;
+  /* height-based: apex lands at ~82% down (at the button) on any screen width.
+     Width adapts automatically — contained on desktop, bursts wide on mobile. */
+  background-size: auto 82%;
+  opacity: 0.6;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 12%, #000 38%, rgba(0,0,0,0.55) 66%, transparent 92%);
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 12%, #000 38%, rgba(0,0,0,0.55) 66%, transparent 92%);
+  /* top fade only so the arm tips blend in; the black gradient submerges the bottom */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 100%);
 }
 @media (max-width: 768px) {
   .hero-v {
-    height: 116%;
-    background-size: 225% auto;
+    background-size: auto 78%;
   }
 }
 
