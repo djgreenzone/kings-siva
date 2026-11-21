@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { LegalPage, Clause, Todo } from "@/components/Legal";
 
 export const metadata: Metadata = {
-  title: "Website Terms of Use — King's Siva Academy",
+  title: "Website Terms of Use",
+  description:
+    "The terms that govern your use of the Kings Siva Academy website.",
+  alternates: { canonical: "/terms-of-use" },
+  robots: { index: false, follow: true },
 };
 
 export default function TermsOfUse() {
