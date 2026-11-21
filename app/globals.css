@@ -96,7 +96,7 @@ img, video { display: block; max-width: 100%; }
 
 /* Metallic gold headline (FIAFIA 26 poster style) */
 .gold-metallic {
-  background: linear-gradient(180deg, #fdf0a2 0%, #f4d873 32%, #edca60 56%, #e4bf50 78%, #f8e28e 100%);
+  background: linear-gradient(180deg, #fbe88e 0%, #f3d670 46%, #f8e187 72%, #efcf66 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

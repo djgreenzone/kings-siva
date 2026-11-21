@@ -54,7 +54,20 @@ export default function LiveStream() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 24 }}>
-          <a href={YT_WATCH} target="_blank" rel="noopener noreferrer" className="btn btn-cyan">
+          <a
+            href={YT_WATCH}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ background: "#FF0000", color: "#fff", display: "inline-flex", alignItems: "center", gap: 12 }}
+          >
+            <svg width="30" height="21" viewBox="0 0 28 20" fill="none" aria-hidden="true">
+              <path
+                d="M27.4 3.12a3.5 3.5 0 0 0-2.46-2.48C22.77 0 14 0 14 0S5.23 0 3.06.64A3.5 3.5 0 0 0 .6 3.12 36.8 36.8 0 0 0 0 10a36.8 36.8 0 0 0 .6 6.88 3.5 3.5 0 0 0 2.46 2.48C5.23 20 14 20 14 20s8.77 0 10.94-.64a3.5 3.5 0 0 0 2.46-2.48A36.8 36.8 0 0 0 28 10a36.8 36.8 0 0 0-.6-6.88Z"
+                fill="#fff"
+              />
+              <path d="M11.2 14.29 18.52 10 11.2 5.71v8.58Z" fill="#FF0000" />
+            </svg>
             Watch on YouTube
           </a>
         </div>

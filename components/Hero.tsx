@@ -25,34 +25,34 @@ export default function Hero() {
         <source src="/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Overlay: clear top -> teal hint -> deep black bottom */}
+      {/* Overlay: clear top -> teal hint -> black rising a quarter higher */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(10,74,84,0.34) 44%, rgba(0,0,0,0.97) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(10,74,84,0.32) 34%, rgba(0,0,0,0.52) 62%, rgba(0,0,0,0.98) 100%)",
         }}
       />
 
-      {/* Gold V angling up from the bottom-center, fading seamlessly into the black */}
+      {/* Big gold V bursting wide from a low center (point hidden below), fading up into black */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           left: 0,
           right: 0,
-          bottom: 0,
-          height: "72%",
+          bottom: "-22%",
+          height: "112%",
           zIndex: 1,
           backgroundImage: "url(/pattern-v-gold.png)",
-          backgroundSize: "contain",
+          backgroundSize: "150% auto",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center bottom",
-          opacity: 0.55,
-          WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 22%, transparent 72%)",
-          maskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 22%, transparent 72%)",
+          opacity: 0.6,
+          WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 45%, transparent 90%)",
+          maskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 45%, transparent 90%)",
           pointerEvents: "none",
         }}
       />

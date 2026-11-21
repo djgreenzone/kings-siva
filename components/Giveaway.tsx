@@ -5,46 +5,56 @@ function PrizeCard({ badge, lines }: { badge: string; lines: string[] }) {
   return (
     <div
       style={{
-        width: "100%",
-        maxWidth: 580,
-        margin: "0 auto",
-        background: "linear-gradient(165deg, rgba(11,46,52,0.96), rgba(4,16,19,0.96))",
-        border: "1px solid rgba(232,198,90,0.45)",
-        borderRadius: 20,
-        padding: "30px 26px 28px",
+        flex: "1 1 320px",
+        maxWidth: 420,
+        display: "flex",
+        flexDirection: "column",
+        background: "linear-gradient(170deg, rgba(10,42,48,0.96), rgba(4,15,18,0.97))",
+        border: "1px solid rgba(232,198,90,0.4)",
+        borderRadius: 18,
+        overflow: "hidden",
         boxShadow: "0 14px 44px rgba(0,0,0,0.45)",
-        textAlign: "center",
       }}
     >
-      <span
-        className="display"
+      {/* Gold header band */}
+      <div
         style={{
-          display: "inline-block",
           background: "linear-gradient(180deg, var(--gold-light), var(--gold-deep))",
-          color: "var(--ink)",
-          padding: "9px 26px",
-          borderRadius: 999,
-          fontSize: "1rem",
-          letterSpacing: "2px",
-          textTransform: "uppercase",
-          boxShadow: "0 4px 16px rgba(200,151,46,0.4)",
+          padding: "16px 20px",
+          textAlign: "center",
         }}
       >
-        {badge}
-      </span>
-      <ul style={{ listStyle: "none", display: "grid", gap: 14, marginTop: 22 }}>
+        <span
+          className="display"
+          style={{ color: "var(--ink)", fontSize: "1.3rem", letterSpacing: "2px", textTransform: "uppercase" }}
+        >
+          {badge}
+        </span>
+      </div>
+      {/* Inclusions checklist */}
+      <ul style={{ listStyle: "none", display: "grid", gap: 16, padding: "26px 24px", flex: 1 }}>
         {lines.map((l) => (
-          <li
-            key={l}
-            className="display"
-            style={{
-              fontSize: "clamp(1.1rem, 3vw, 1.4rem)",
-              letterSpacing: "0.5px",
-              color: "var(--cream)",
-              lineHeight: 1.15,
-            }}
-          >
-            {l}
+          <li key={l} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+            <span
+              aria-hidden="true"
+              style={{
+                flexShrink: 0,
+                width: 22,
+                height: 22,
+                borderRadius: 999,
+                background: "var(--gold)",
+                color: "var(--ink)",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                marginTop: 2,
+              }}
+            >
+              ✓
+            </span>
+            <span style={{ fontSize: "1.02rem", color: "var(--cream)", lineHeight: 1.35 }}>{l}</span>
           </li>
         ))}
       </ul>
@@ -109,7 +119,17 @@ export default function Giveaway() {
         >
           Packages Available
         </p>
-        <div style={{ display: "grid", gap: 20, marginBottom: 44 }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 20,
+            justifyContent: "center",
+            alignItems: "stretch",
+            maxWidth: 880,
+            margin: "0 auto 44px",
+          }}
+        >
           <PrizeCard
             badge="One Winner"
             lines={["1 return flight to Samoa", "3 nights at Samoa Beach Resort"]}
