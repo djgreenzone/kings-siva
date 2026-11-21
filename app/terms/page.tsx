@@ -2,7 +2,17 @@ import type { Metadata } from "next";
 import { LegalPage, Clause, Todo } from "@/components/Legal";
 
 export const metadata: Metadata = {
-  title: "Competition Terms & Conditions — King's Siva Academy",
+  title: "Competition Terms & Conditions",
+  description:
+    "Official terms and conditions for the Kings Siva Academy “Win a Trip to Samoa” giveaway: eligibility, entry, prizes and how the winner is drawn.",
+  alternates: { canonical: "/terms" },
+  openGraph: {
+    title: "Competition Terms & Conditions | Kings Siva Academy",
+    description:
+      "Official terms for the Kings Siva Academy “Win a Trip to Samoa” giveaway.",
+    url: "/terms",
+    type: "article",
+  },
 };
 
 export default function Terms() {

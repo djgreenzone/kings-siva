@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { LegalPage, Clause, Todo } from "@/components/Legal";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — King's Siva Academy",
+  title: "Privacy Policy",
+  description:
+    "How Kings Siva Academy collects, uses and protects your personal information when you enter the giveaway or use this website.",
+  alternates: { canonical: "/privacy" },
+  robots: { index: false, follow: true },
 };
 
 export default function Privacy() {
