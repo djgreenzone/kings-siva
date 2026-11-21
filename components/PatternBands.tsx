@@ -1,10 +1,10 @@
 /**
- * Vertical gold tatau pattern bands down the left & right edges —
- * the signature framing from the FIAFIA 26 / Measina posters.
+ * Gold V-pattern down the left & right edges — the dominant motif from the
+ * FIAFIA 26 posters. Mirrored so each side angles inward.
  */
 export default function PatternBands({
-  width = "clamp(30px, 8vw, 72px)",
-  opacity = 0.55,
+  width = "clamp(34px, 9vw, 90px)",
+  opacity = 0.5,
 }: {
   width?: string;
   opacity?: number;
@@ -15,7 +15,7 @@ export default function PatternBands({
     bottom: 0,
     [side]: 0,
     width,
-    backgroundImage: "url(/pattern-tatau-gold.png)",
+    backgroundImage: "url(/pattern-v-gold.png)",
     backgroundSize: "cover",
     backgroundPosition: side === "left" ? "left center" : "right center",
     opacity,

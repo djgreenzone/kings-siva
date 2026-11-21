@@ -69,11 +69,12 @@ export default function Hero() {
         </h1>
         <p
           style={{
-            fontSize: "clamp(1rem, 3.5vw, 1.45rem)",
-            maxWidth: 620,
-            marginTop: 18,
-            marginBottom: 38,
+            fontSize: "clamp(0.85rem, 2.4vw, 1.05rem)",
+            maxWidth: 520,
+            marginTop: 16,
+            marginBottom: 34,
             color: "var(--cream)",
+            opacity: 0.92,
           }}
         >
           To teach, inspire &amp; empower the next generation of Samoans in
